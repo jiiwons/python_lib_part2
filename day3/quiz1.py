@@ -6,6 +6,7 @@ from matplotlib.lines import lineStyles
 plt.rc('font', family='Malgun Gothic')
 
 data = pd.read_csv('covid_data.csv', index_col='국가')
+print(data)
 chartdata = data['4월06일']
 print(chartdata)
 

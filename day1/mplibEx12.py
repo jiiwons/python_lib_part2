@@ -8,7 +8,7 @@ plt_data1 = np.random.randn(50).cumsum()
 plt_data2 = np.random.randn(50).cumsum()
 plt_data3 = np.random.randn(50).cumsum()
 plt_data4 = np.random.randn(50).cumsum()
-
+print(plt_data4)
 # x = np.linspace(0, 50, 50)
 
 # plt.plot(x, plt_data1,
@@ -36,5 +36,5 @@ plt.xlabel('Draw')
 plt.ylabel('Random Number')
 plt.legend(loc=1)
 
-plt.savefig('line_plot_quiz.png', dpi=400, bbox_inches='tight')
-plt.show()
+# plt.savefig('line_plot_quiz.png', dpi=400, bbox_inches='tight')
+# plt.show()

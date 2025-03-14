@@ -9,7 +9,7 @@ data2016=data[2016]
 data2017=data[2017]
 data2018=data[2018]
 data2019=data[2019]
-
+print(data2019)
 plt.figure(figsize=(15,4))
 # plt.plot(data2016, color='b', marker='o', label='2016')
 # plt.plot(data2017, color='orange', marker='o', label='2017')

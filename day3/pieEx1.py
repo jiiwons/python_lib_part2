@@ -10,22 +10,22 @@ plt.rc('font', family='Malgun Gothic')
 
 data = pd.read_csv('covid_data.csv', index_col='국가')
 chartdata = data.loc[['독일', '프랑스', '중국', '영국'],'4월06일']
-# mylabel = chartdata.index
-# mycolors = ['blue', '#6aff00', 'yellow', '#ff113c']
-#
-# plt.figure(figsize=(5,5))
-# plt.pie(chartdata,
-#         labels=mylabel,
-#         startangle=90,
-#         colors=mycolors,
-#         autopct='%.2f%%',
-#         counterclock=False,
-#         explode=(0,0.1,0,0),
-#         shadow=True)
-# plt.legend(loc='best')
-# plt.xlabel('국가명')
-# plt.title('주요 국가 코로나 발생 비율(4월 6일)')
-# plt.show()
+mylabel = chartdata.index
+mycolors = ['blue', '#6aff00', 'yellow', '#ff113c']
+
+plt.figure(figsize=(5,5))
+plt.pie(chartdata,
+        labels=mylabel,
+        startangle=90,
+        colors=mycolors,
+        autopct='%.2f%%',
+        counterclock=False,
+        explode=(0,0.1,0,0),
+        shadow=True)
+plt.legend(loc='best')
+plt.xlabel('국가명')
+plt.title('주요 국가 코로나 발생 비율(4월 6일)')
+plt.show()
 
 
 fig, ax = plt.subplots(figsize=(8,4))
