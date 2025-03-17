@@ -21,8 +21,15 @@ print()
 #     (이때 범례도 같이 출력한다. )
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.countplot(x='type', hue='quality', data=wine)
+# sns.countplot(x='type', hue='quality', data=wine)
+# plt.show()
+
+## 강사님 코드
+by_quality = wine.groupby(['quality','type']).size().unstack()
+by_quality.plot(kind='bar')
 plt.show()
-#  g. 와인 종류에 따라 품질의 차이를 검정(분산, 평균)하여 각 각을 출력한다.
-print(wine.groupby('type')['quality'].var())
-print(wine.groupby('type')['quality'].mean())
+
+# #  g. 와인 종류에 따라 품질의 차이를 검정(분산, 평균)하여 각 각을 출력한다.
+# print(wine.groupby('type')['quality'].var())
+# print(wine.groupby('type')['quality'].mean())
+print(wine.groupby(['type'])[['quality']].agg(['var', 'mean']))
